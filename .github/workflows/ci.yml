@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Checkout D++
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install apt packages
         run: sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install  ${{ matrix.cfg.cpp-version }}:${{ matrix.cfg.arch }} ninja-build libsodium-dev:${{ matrix.cfg.arch }} libopus-dev:${{ matrix.cfg.arch }} zlib1g-dev:${{ matrix.cfg.arch }} rpm:${{ matrix.cfg.arch }}
@@ -74,7 +74,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout D++
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install homebrew packages
         run: brew install cmake ninja libsodium opus openssl
@@ -103,7 +103,7 @@ jobs:
     runs-on: ${{matrix.cfg.os}}
     steps:
       - name: Checkout D++
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: main
 
@@ -151,7 +151,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout D++
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Packages
         run: sudo apt update && sudo apt install cmake ninja-build rpm
