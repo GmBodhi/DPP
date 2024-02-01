@@ -108,7 +108,7 @@ jobs:
           path: main
 
       - name: Add MSBuild to PATH
-        uses: microsoft/setup-msbuild@v1.0.2
+        uses: microsoft/setup-msbuild@v2.0.0
 
       - name: Install chocolatey packages ${{ matrix.cfg.arch}}
         run: choco install ninja -y
